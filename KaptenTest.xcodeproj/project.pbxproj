@@ -22,6 +22,7 @@
 		94DC4039234E44B700F7A803 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4038234E44B700F7A803 /* Trips.json */; };
 		94DC403B234E60F900F7A803 /* NSAttributedStringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC403A234E60F900F7A803 /* NSAttributedStringExtensions.swift */; };
 		94DC403D234E643800F7A803 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC403C234E643800F7A803 /* UIColorExtensions.swift */; };
+		94DC403F234E65E000F7A803 /* TripsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC403E234E65E000F7A803 /* TripsListView.swift */; };
 		B8C77340A0C71367440C8561 /* Pods_KaptenTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F46F2E16AC3853D00DD52D1 /* Pods_KaptenTest.framework */; };
 		D94A1A7BDC83777B0A99D80F /* Pods_KaptenTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9BC20EF540DA1E4C8EF5E5 /* Pods_KaptenTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		94DC4038234E44B700F7A803 /* Trips.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		94DC403A234E60F900F7A803 /* NSAttributedStringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSAttributedStringExtensions.swift; sourceTree = "<group>"; };
 		94DC403C234E643800F7A803 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		94DC403E234E65E000F7A803 /* TripsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListView.swift; sourceTree = "<group>"; };
 		A17595E4989DDADF62E1A501 /* Pods-KaptenTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTest.release.xcconfig"; path = "Target Support Files/Pods-KaptenTest/Pods-KaptenTest.release.xcconfig"; sourceTree = "<group>"; };
 		FA94868995F2E4DC695126D4 /* Pods-KaptenTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTestTests.release.xcconfig"; path = "Target Support Files/Pods-KaptenTestTests/Pods-KaptenTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF9BC20EF540DA1E4C8EF5E5 /* Pods_KaptenTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaptenTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				94DC4001234E18ED00F7A803 /* TripsListViewController.swift */,
+				94DC403E234E65E000F7A803 /* TripsListView.swift */,
 			);
 			path = "Trips List";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DC403F234E65E000F7A803 /* TripsListView.swift in Sources */,
 				94DC4028234E21C400F7A803 /* Trip.swift in Sources */,
 				94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */,
 				94DC403B234E60F900F7A803 /* NSAttributedStringExtensions.swift in Sources */,
