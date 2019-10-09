@@ -12,7 +12,7 @@ target 'KaptenTest' do
 
   target 'KaptenTestTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxTest', '~> 5'
   end
 
 end

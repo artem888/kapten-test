@@ -13,7 +13,14 @@
 		94DC4005234E18ED00F7A803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4003234E18ED00F7A803 /* Main.storyboard */; };
 		94DC4007234E18EF00F7A803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4006234E18EF00F7A803 /* Assets.xcassets */; };
 		94DC400A234E18EF00F7A803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4008234E18EF00F7A803 /* LaunchScreen.storyboard */; };
-		94DC4015234E18EF00F7A803 /* KaptenTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4014234E18EF00F7A803 /* KaptenTestTests.swift */; };
+		94DC4025234E212E00F7A803 /* StarwarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4024234E212E00F7A803 /* StarwarsAPI.swift */; };
+		94DC4028234E21C400F7A803 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4027234E21C400F7A803 /* Trip.swift */; };
+		94DC402B234E2A2E00F7A803 /* Trip.json in Resources */ = {isa = PBXBuildFile; fileRef = 94DC402A234E2A2E00F7A803 /* Trip.json */; };
+		94DC402E234E2A5500F7A803 /* TripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC402D234E2A5500F7A803 /* TripTests.swift */; };
+		94DC4030234E370A00F7A803 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC402F234E370A00F7A803 /* NetworkingService.swift */; };
+		94DC4035234E3F0600F7A803 /* StarwarsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4034234E3F0600F7A803 /* StarwarsAPITests.swift */; };
+		94DC4037234E43A800F7A803 /* NetworkingServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4036234E43A800F7A803 /* NetworkingServiceMock.swift */; };
+		94DC4039234E44B700F7A803 /* Trips.json in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4038234E44B700F7A803 /* Trips.json */; };
 		B8C77340A0C71367440C8561 /* Pods_KaptenTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F46F2E16AC3853D00DD52D1 /* Pods_KaptenTest.framework */; };
 		D94A1A7BDC83777B0A99D80F /* Pods_KaptenTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9BC20EF540DA1E4C8EF5E5 /* Pods_KaptenTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -41,8 +48,15 @@
 		94DC4009234E18EF00F7A803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94DC400B234E18EF00F7A803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94DC4010234E18EF00F7A803 /* KaptenTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaptenTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94DC4014234E18EF00F7A803 /* KaptenTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaptenTestTests.swift; sourceTree = "<group>"; };
 		94DC4016234E18EF00F7A803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94DC4024234E212E00F7A803 /* StarwarsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarwarsAPI.swift; sourceTree = "<group>"; };
+		94DC4027234E21C400F7A803 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		94DC402A234E2A2E00F7A803 /* Trip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Trip.json; sourceTree = "<group>"; };
+		94DC402D234E2A5500F7A803 /* TripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTests.swift; sourceTree = "<group>"; };
+		94DC402F234E370A00F7A803 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		94DC4034234E3F0600F7A803 /* StarwarsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarwarsAPITests.swift; sourceTree = "<group>"; };
+		94DC4036234E43A800F7A803 /* NetworkingServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingServiceMock.swift; sourceTree = "<group>"; };
+		94DC4038234E44B700F7A803 /* Trips.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Trips.json; sourceTree = "<group>"; };
 		A17595E4989DDADF62E1A501 /* Pods-KaptenTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTest.release.xcconfig"; path = "Target Support Files/Pods-KaptenTest/Pods-KaptenTest.release.xcconfig"; sourceTree = "<group>"; };
 		FA94868995F2E4DC695126D4 /* Pods-KaptenTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTestTests.release.xcconfig"; path = "Target Support Files/Pods-KaptenTestTests/Pods-KaptenTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		FF9BC20EF540DA1E4C8EF5E5 /* Pods_KaptenTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaptenTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +119,7 @@
 				94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */,
 				94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */,
 				94DC401F234E1F6900F7A803 /* Extensions */,
+				94DC4026234E21B300F7A803 /* Models */,
 				94DC4022234E1FCA00F7A803 /* Networking */,
 				94DC4023234E1FD600F7A803 /* Resources */,
 				94DC4021234E1FC100F7A803 /* Trip Details */,
@@ -116,7 +131,9 @@
 		94DC4013234E18EF00F7A803 /* KaptenTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				94DC4014234E18EF00F7A803 /* KaptenTestTests.swift */,
+				94DC4031234E3EDA00F7A803 /* Networking */,
+				94DC402C234E2A3800F7A803 /* Models */,
+				94DC4029234E2A1500F7A803 /* Resources */,
 				94DC4016234E18EF00F7A803 /* Info.plist */,
 			);
 			path = KaptenTestTests;
@@ -147,6 +164,8 @@
 		94DC4022234E1FCA00F7A803 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				94DC4024234E212E00F7A803 /* StarwarsAPI.swift */,
+				94DC402F234E370A00F7A803 /* NetworkingService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -160,6 +179,40 @@
 				94DC400B234E18EF00F7A803 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		94DC4026234E21B300F7A803 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94DC4027234E21C400F7A803 /* Trip.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94DC4029234E2A1500F7A803 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94DC402A234E2A2E00F7A803 /* Trip.json */,
+				94DC4038234E44B700F7A803 /* Trips.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		94DC402C234E2A3800F7A803 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94DC402D234E2A5500F7A803 /* TripTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		94DC4031234E3EDA00F7A803 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				94DC4034234E3F0600F7A803 /* StarwarsAPITests.swift */,
+				94DC4036234E43A800F7A803 /* NetworkingServiceMock.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		A948B998625BCDB4FC6B553C /* Frameworks */ = {
@@ -201,6 +254,7 @@
 				94DC400C234E18EF00F7A803 /* Sources */,
 				94DC400D234E18EF00F7A803 /* Frameworks */,
 				94DC400E234E18EF00F7A803 /* Resources */,
+				45EA9C0CFF64D8798F82C3A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -227,6 +281,7 @@
 					};
 					94DC400F234E18EF00F7A803 = {
 						CreatedOnToolsVersion = 11.1;
+						LastSwiftMigration = 1110;
 						TestTargetID = 94DC3FF9234E18ED00F7A803;
 					};
 				};
@@ -265,6 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DC4039234E44B700F7A803 /* Trips.json in Resources */,
+				94DC402B234E2A2E00F7A803 /* Trip.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +343,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaptenTest/Pods-KaptenTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45EA9C0CFF64D8798F82C3A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaptenTestTests/Pods-KaptenTestTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaptenTestTests/Pods-KaptenTestTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaptenTestTests/Pods-KaptenTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8CCFFE71F92A2CE36068CB13 /* [CP] Check Pods Manifest.lock */ = {
@@ -339,7 +413,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DC4028234E21C400F7A803 /* Trip.swift in Sources */,
 				94DC4002234E18ED00F7A803 /* ViewController.swift in Sources */,
+				94DC4025234E212E00F7A803 /* StarwarsAPI.swift in Sources */,
+				94DC4030234E370A00F7A803 /* NetworkingService.swift in Sources */,
 				94DC3FFE234E18ED00F7A803 /* AppDelegate.swift in Sources */,
 				94DC4000234E18ED00F7A803 /* SceneDelegate.swift in Sources */,
 			);
@@ -349,7 +426,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94DC4015234E18EF00F7A803 /* KaptenTestTests.swift in Sources */,
+				94DC402E234E2A5500F7A803 /* TripTests.swift in Sources */,
+				94DC4035234E3F0600F7A803 /* StarwarsAPITests.swift in Sources */,
+				94DC4037234E43A800F7A803 /* NetworkingServiceMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +582,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KaptenTest/Info.plist;
+				INFOPLIST_FILE = KaptenTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -521,7 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KaptenTest/Info.plist;
+				INFOPLIST_FILE = KaptenTest/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,6 +618,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KaptenTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -549,6 +629,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = artem.KaptenTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KaptenTest.app/KaptenTest";
@@ -561,6 +642,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = KaptenTestTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
