@@ -17,6 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let controller = TripsListViewController()
         let rootController = UINavigationController(rootViewController: controller)
+        rootController.navigationBar.barTintColor = .clear
+        rootController.navigationBar.isTranslucent = false
         self.window?.rootViewController = rootController
         self.window?.makeKeyAndVisible()
     }

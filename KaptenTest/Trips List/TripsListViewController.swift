@@ -11,6 +11,15 @@ import UIKit
 class TripsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        styleNavBar()
+    }
+    
+    // MARK: Private
+    private func styleNavBar() {
+        let navigationTitleLabel = UILabel()
+        navigationTitleLabel.attributedText = .navigationAttributedTitle(with: "LAST TRIPS")
+        self.navigationItem.titleView = navigationTitleLabel
     }
 }
 
