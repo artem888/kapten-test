@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TripsListViewController.swift
 //  KaptenTest
 //
 //  Created by Artem Sidorenko on 09/10/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TripsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }

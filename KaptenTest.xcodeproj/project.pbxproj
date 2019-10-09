@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		94DC3FFE234E18ED00F7A803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */; };
 		94DC4000234E18ED00F7A803 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */; };
-		94DC4002234E18ED00F7A803 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4001234E18ED00F7A803 /* ViewController.swift */; };
-		94DC4005234E18ED00F7A803 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4003234E18ED00F7A803 /* Main.storyboard */; };
+		94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4001234E18ED00F7A803 /* TripsListViewController.swift */; };
 		94DC4007234E18EF00F7A803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4006234E18EF00F7A803 /* Assets.xcassets */; };
 		94DC400A234E18EF00F7A803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4008234E18EF00F7A803 /* LaunchScreen.storyboard */; };
 		94DC4025234E212E00F7A803 /* StarwarsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4024234E212E00F7A803 /* StarwarsAPI.swift */; };
@@ -42,8 +41,7 @@
 		94DC3FFA234E18ED00F7A803 /* KaptenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaptenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		94DC4001234E18ED00F7A803 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		94DC4004234E18ED00F7A803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		94DC4001234E18ED00F7A803 /* TripsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListViewController.swift; sourceTree = "<group>"; };
 		94DC4006234E18EF00F7A803 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94DC4009234E18EF00F7A803 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94DC400B234E18EF00F7A803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -149,7 +147,7 @@
 		94DC4020234E1FBB00F7A803 /* Trips List */ = {
 			isa = PBXGroup;
 			children = (
-				94DC4001234E18ED00F7A803 /* ViewController.swift */,
+				94DC4001234E18ED00F7A803 /* TripsListViewController.swift */,
 			);
 			path = "Trips List";
 			sourceTree = "<group>";
@@ -173,7 +171,6 @@
 		94DC4023234E1FD600F7A803 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				94DC4003234E18ED00F7A803 /* Main.storyboard */,
 				94DC4006234E18EF00F7A803 /* Assets.xcassets */,
 				94DC4008234E18EF00F7A803 /* LaunchScreen.storyboard */,
 				94DC400B234E18EF00F7A803 /* Info.plist */,
@@ -312,7 +309,6 @@
 			files = (
 				94DC400A234E18EF00F7A803 /* LaunchScreen.storyboard in Resources */,
 				94DC4007234E18EF00F7A803 /* Assets.xcassets in Resources */,
-				94DC4005234E18ED00F7A803 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94DC4028234E21C400F7A803 /* Trip.swift in Sources */,
-				94DC4002234E18ED00F7A803 /* ViewController.swift in Sources */,
+				94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */,
 				94DC4025234E212E00F7A803 /* StarwarsAPI.swift in Sources */,
 				94DC4030234E370A00F7A803 /* NetworkingService.swift in Sources */,
 				94DC3FFE234E18ED00F7A803 /* AppDelegate.swift in Sources */,
@@ -443,14 +439,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		94DC4003234E18ED00F7A803 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94DC4004234E18ED00F7A803 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		94DC4008234E18EF00F7A803 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

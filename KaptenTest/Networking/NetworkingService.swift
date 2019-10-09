@@ -19,7 +19,7 @@ protocol NetworkingService {
     func getData(with url: URL) -> Observable<Data>
 }
 
-class AlamofireNetworkingService: NetworkingService {
+final class AlamofireNetworkingService: NetworkingService {
     func getData(with url: URL) -> Observable<Data> {
         return requestData(.get, url).map { response, data in
             guard response.statusCode == 200 else {

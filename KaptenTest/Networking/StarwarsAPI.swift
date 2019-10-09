@@ -13,7 +13,7 @@ protocol StarwarsAPIProtocol {
     func trips() -> Observable<[Trip]>
 }
 
-class StarwarsAPI: StarwarsAPIProtocol {
+final class StarwarsAPI: StarwarsAPIProtocol {
     private enum Address: String {
         case trips = "trips"
         
