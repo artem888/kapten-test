@@ -14,6 +14,8 @@
 		94DC4007234E18EF00F7A803 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4006234E18EF00F7A803 /* Assets.xcassets */; };
 		94DC400A234E18EF00F7A803 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DC4008234E18EF00F7A803 /* LaunchScreen.storyboard */; };
 		94DC4015234E18EF00F7A803 /* KaptenTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4014234E18EF00F7A803 /* KaptenTestTests.swift */; };
+		B8C77340A0C71367440C8561 /* Pods_KaptenTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F46F2E16AC3853D00DD52D1 /* Pods_KaptenTest.framework */; };
+		D94A1A7BDC83777B0A99D80F /* Pods_KaptenTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF9BC20EF540DA1E4C8EF5E5 /* Pods_KaptenTestTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		68CD2EAC29FA124C2C49F0B4 /* Pods-KaptenTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTestTests.debug.xcconfig"; path = "Target Support Files/Pods-KaptenTestTests/Pods-KaptenTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F46F2E16AC3853D00DD52D1 /* Pods_KaptenTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaptenTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		771E7A9B265A05075F37B769 /* Pods-KaptenTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTest.debug.xcconfig"; path = "Target Support Files/Pods-KaptenTest/Pods-KaptenTest.debug.xcconfig"; sourceTree = "<group>"; };
 		94DC3FFA234E18ED00F7A803 /* KaptenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaptenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,9 @@
 		94DC4010234E18EF00F7A803 /* KaptenTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KaptenTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC4014234E18EF00F7A803 /* KaptenTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaptenTestTests.swift; sourceTree = "<group>"; };
 		94DC4016234E18EF00F7A803 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A17595E4989DDADF62E1A501 /* Pods-KaptenTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTest.release.xcconfig"; path = "Target Support Files/Pods-KaptenTest/Pods-KaptenTest.release.xcconfig"; sourceTree = "<group>"; };
+		FA94868995F2E4DC695126D4 /* Pods-KaptenTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTestTests.release.xcconfig"; path = "Target Support Files/Pods-KaptenTestTests/Pods-KaptenTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF9BC20EF540DA1E4C8EF5E5 /* Pods_KaptenTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaptenTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8C77340A0C71367440C8561 /* Pods_KaptenTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94A1A7BDC83777B0A99D80F /* Pods_KaptenTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		819E58E4559DB49B0F1BC253 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				771E7A9B265A05075F37B769 /* Pods-KaptenTest.debug.xcconfig */,
+				A17595E4989DDADF62E1A501 /* Pods-KaptenTest.release.xcconfig */,
+				68CD2EAC29FA124C2C49F0B4 /* Pods-KaptenTestTests.debug.xcconfig */,
+				FA94868995F2E4DC695126D4 /* Pods-KaptenTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		94DC3FF1234E18ED00F7A803 = {
 			isa = PBXGroup;
 			children = (
 				94DC3FFC234E18ED00F7A803 /* KaptenTest */,
 				94DC4013234E18EF00F7A803 /* KaptenTestTests */,
 				94DC3FFB234E18ED00F7A803 /* Products */,
+				819E58E4559DB49B0F1BC253 /* Pods */,
+				A948B998625BCDB4FC6B553C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +123,15 @@
 			path = KaptenTestTests;
 			sourceTree = "<group>";
 		};
+		A948B998625BCDB4FC6B553C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F46F2E16AC3853D00DD52D1 /* Pods_KaptenTest.framework */,
+				FF9BC20EF540DA1E4C8EF5E5 /* Pods_KaptenTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94DC4019234E18EF00F7A803 /* Build configuration list for PBXNativeTarget "KaptenTest" */;
 			buildPhases = (
+				8CCFFE71F92A2CE36068CB13 /* [CP] Check Pods Manifest.lock */,
 				94DC3FF6234E18ED00F7A803 /* Sources */,
 				94DC3FF7234E18ED00F7A803 /* Frameworks */,
 				94DC3FF8234E18ED00F7A803 /* Resources */,
+				0F15392AF31B486EA0363C19 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94DC401C234E18EF00F7A803 /* Build configuration list for PBXNativeTarget "KaptenTestTests" */;
 			buildPhases = (
+				EFB1933939E8D0144E1C9464 /* [CP] Check Pods Manifest.lock */,
 				94DC400C234E18EF00F7A803 /* Sources */,
 				94DC400D234E18EF00F7A803 /* Frameworks */,
 				94DC400E234E18EF00F7A803 /* Resources */,
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F15392AF31B486EA0363C19 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaptenTest/Pods-KaptenTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KaptenTest/Pods-KaptenTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KaptenTest/Pods-KaptenTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CCFFE71F92A2CE36068CB13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaptenTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EFB1933939E8D0144E1C9464 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KaptenTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94DC3FF6234E18ED00F7A803 /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		94DC401A234E18EF00F7A803 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 771E7A9B265A05075F37B769 /* Pods-KaptenTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +478,7 @@
 		};
 		94DC401B234E18EF00F7A803 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A17595E4989DDADF62E1A501 /* Pods-KaptenTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +496,7 @@
 		};
 		94DC401D234E18EF00F7A803 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68CD2EAC29FA124C2C49F0B4 /* Pods-KaptenTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +518,7 @@
 		};
 		94DC401E234E18EF00F7A803 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA94868995F2E4DC695126D4 /* Pods-KaptenTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
