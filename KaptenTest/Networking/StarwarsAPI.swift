@@ -14,13 +14,13 @@ protocol StarwarsAPIProtocol {
 }
 
 final class StarwarsAPI: StarwarsAPIProtocol {
+    static let baseURL: String = "https://starwars.kapten.com"
+    
     private enum Address: String {
         case trips = "trips"
         
-        var baseURL: String { return "https://starwars.kapten.com/" }
-        
         var url: URL {
-            return URL(string: baseURL.appending(rawValue))!
+            return URL(string: "\(StarwarsAPI.baseURL)/\(rawValue)")!
         }
     }
     
