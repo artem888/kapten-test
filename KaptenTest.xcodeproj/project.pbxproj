@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -76,7 +76,6 @@
 				68CD2EAC29FA124C2C49F0B4 /* Pods-KaptenTestTests.debug.xcconfig */,
 				FA94868995F2E4DC695126D4 /* Pods-KaptenTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -105,11 +104,11 @@
 			children = (
 				94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */,
 				94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */,
-				94DC4001234E18ED00F7A803 /* ViewController.swift */,
-				94DC4003234E18ED00F7A803 /* Main.storyboard */,
-				94DC4006234E18EF00F7A803 /* Assets.xcassets */,
-				94DC4008234E18EF00F7A803 /* LaunchScreen.storyboard */,
-				94DC400B234E18EF00F7A803 /* Info.plist */,
+				94DC401F234E1F6900F7A803 /* Extensions */,
+				94DC4022234E1FCA00F7A803 /* Networking */,
+				94DC4023234E1FD600F7A803 /* Resources */,
+				94DC4021234E1FC100F7A803 /* Trip Details */,
+				94DC4020234E1FBB00F7A803 /* Trips List */,
 			);
 			path = KaptenTest;
 			sourceTree = "<group>";
@@ -121,6 +120,46 @@
 				94DC4016234E18EF00F7A803 /* Info.plist */,
 			);
 			path = KaptenTestTests;
+			sourceTree = "<group>";
+		};
+		94DC401F234E1F6900F7A803 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		94DC4020234E1FBB00F7A803 /* Trips List */ = {
+			isa = PBXGroup;
+			children = (
+				94DC4001234E18ED00F7A803 /* ViewController.swift */,
+			);
+			path = "Trips List";
+			sourceTree = "<group>";
+		};
+		94DC4021234E1FC100F7A803 /* Trip Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Trip Details";
+			sourceTree = "<group>";
+		};
+		94DC4022234E1FCA00F7A803 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		94DC4023234E1FD600F7A803 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				94DC4003234E18ED00F7A803 /* Main.storyboard */,
+				94DC4006234E18EF00F7A803 /* Assets.xcassets */,
+				94DC4008234E18EF00F7A803 /* LaunchScreen.storyboard */,
+				94DC400B234E18EF00F7A803 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		A948B998625BCDB4FC6B553C /* Frameworks */ = {
