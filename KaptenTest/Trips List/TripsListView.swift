@@ -11,6 +11,7 @@ import UIKit
 protocol TripsListViewDelegate: class {
     func tripsListViewRetryButtonDidTap(_ view: TripsListView)
     func tripsListView(_ view: TripsListView, didSelectTripAt index: Int)
+    func tripsListView(_ view: TripsListView, heightForCellAt index: Int) -> CGFloat
 }
 
 final class TripsListView: UIView {
@@ -118,7 +119,8 @@ final class TripsListView: UIView {
 extension TripsListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88
+        return delegate?.tripsListView(self,
+                                       heightForCellAt: indexPath.row) ?? 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

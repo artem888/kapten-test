@@ -79,7 +79,13 @@ extension TripsListViewController: TripsListViewDelegate {
         viewModel.refreshTrips()
     }
     
-    func tripsListView(_ view: TripsListView, didSelectTripAt index: Int) {
+    func tripsListView(_ view: TripsListView,
+                       didSelectTripAt index: Int) {
         
+    }
+    
+    func tripsListView(_ view: TripsListView,
+                       heightForCellAt index: Int) -> CGFloat {
+        return viewModel.hasRating(at: index) ? 116 : 88
     }
 }

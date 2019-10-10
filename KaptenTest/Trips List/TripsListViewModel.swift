@@ -46,6 +46,7 @@ protocol TripsListViewModelProtocol {
     var viewState: Driver<TripsListViewModel.ViewState> { get }
     
     func refreshTrips()
+    func hasRating(at index: Int) -> Bool
 }
 
 final class TripsListViewModel: TripsListViewModelProtocol {
@@ -83,6 +84,10 @@ final class TripsListViewModel: TripsListViewModelProtocol {
             self.tripsRelay.accept([])
             self.loadingRelay.accept(false)
         }).disposed(by: bag)
+    }
+    
+    func hasRating(at index: Int) -> Bool {
+        return tripsRelay.value[index].hasRating
     }
     
     // MARK: Private
