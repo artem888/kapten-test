@@ -31,6 +31,7 @@ class StarwarsAPIProtocolMock: StarwarsAPIProtocol {
             Trip(id: 123,
                  pilotName: "Darth",
                  pilotAvatar: "/some_avatar.png",
+                 pilotRating: 4.0,
                  pickupName: "Hoth",
                  dropoffName: "Tatooine")
         ]

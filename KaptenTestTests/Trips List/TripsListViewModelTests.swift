@@ -104,18 +104,29 @@ class TripsListViewModelTests: XCTestCase {
 
 class TripCellDataTests: XCTestCase {
     func testCellDataIsCorrect() {
-        let trip: TripCellData = createTrip()
+        let trip: TripCellData = createTrip(with: 5.0)
         XCTAssertEqual(trip.title, "DARTH")
         XCTAssertEqual(trip.from, "Hoth")
         XCTAssertEqual(trip.to, "Tatooine")
         XCTAssertEqual(trip.imageUrl!, URL(string: "https://starwars.kapten.com/some_avatar.png"))
     }
     
+    func testHasRatingTrue() {
+        let trip: TripCellData = createTrip(with: 5.0)
+        XCTAssertTrue(trip.hasRating)
+    }
+    
+    func testHasRatingFalse() {
+        let trip: TripCellData = createTrip(with: 0.0)
+        XCTAssertFalse(trip.hasRating)
+    }
+    
     // MARK: Private
-    private func createTrip() -> Trip {
+    private func createTrip(with rating: Double) -> Trip {
         return Trip(id: 123,
                     pilotName: "Darth",
                     pilotAvatar: "/some_avatar.png",
+                    pilotRating: rating,
                     pickupName: "Hoth",
                     dropoffName: "Tatooine")
     }

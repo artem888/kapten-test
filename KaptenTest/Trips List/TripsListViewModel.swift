@@ -15,9 +15,14 @@ protocol TripCellData {
     var from: String { get }
     var to: String { get }
     var imageUrl: URL? { get }
+    var hasRating: Bool { get }
 }
 
 extension Trip: TripCellData {
+    var hasRating: Bool {
+        return pilotRating > 0.0
+    }
+    
     var title: String {
         pilotName.uppercased()
     }

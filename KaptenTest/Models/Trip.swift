@@ -12,6 +12,7 @@ struct Trip {
     let id: Int
     let pilotName: String
     let pilotAvatar: String
+    let pilotRating: Double
     let pickupName: String
     let dropoffName: String
 }
@@ -20,6 +21,7 @@ extension Trip: Decodable {
     private struct Pilot: Decodable {
         let name: String
         let avatar: String
+        let rating: Double
     }
     
     private struct Pickup: Decodable {
@@ -42,6 +44,7 @@ extension Trip: Decodable {
         let pilot = try container.decode(Pilot.self, forKey: .pilot)
         pilotName = pilot.name
         pilotAvatar = pilot.avatar
+        pilotRating = pilot.rating
         
         let pickup = try container.decode(Pickup.self, forKey: .pickup)
         pickupName = pickup.name

@@ -17,6 +17,7 @@ class TripTests: XCTestCase {
         XCTAssertEqual(trip.pilotAvatar, "/static/dark-vador.png")
         XCTAssertEqual(trip.pickupName, "Yavin 4")
         XCTAssertEqual(trip.dropoffName, "Naboo")
+        XCTAssertEqual(trip.pilotRating, 5.0)
     }
     
     // MARK: Private
