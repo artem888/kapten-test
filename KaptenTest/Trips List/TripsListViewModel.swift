@@ -16,6 +16,7 @@ protocol TripCellData {
     var to: String { get }
     var imageUrl: URL? { get }
     var hasRating: Bool { get }
+    var rating: Int { get }
 }
 
 extension Trip: TripCellData {
@@ -37,6 +38,10 @@ extension Trip: TripCellData {
     
     var imageUrl: URL? {
         URL(string: "\(StarwarsAPI.baseURL)\(pilotAvatar)")
+    }
+    
+    var rating: Int {
+        return Int(pilotRating.rounded())
     }
 }
 

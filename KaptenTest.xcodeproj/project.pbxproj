@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		945EF797234F7CE000B9E7F1 /* TripsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF796234F7CE000B9E7F1 /* TripsListCell.swift */; };
 		945EF79A234F82FE00B9E7F1 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF799234F82FE00B9E7F1 /* Constans.swift */; };
+		945EF79D234F9FF100B9E7F1 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF79C234F9FF100B9E7F1 /* RatingView.swift */; };
 		94DC3FFE234E18ED00F7A803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */; };
 		94DC4000234E18ED00F7A803 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */; };
 		94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4001234E18ED00F7A803 /* TripsListViewController.swift */; };
@@ -48,6 +49,7 @@
 		771E7A9B265A05075F37B769 /* Pods-KaptenTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTest.debug.xcconfig"; path = "Target Support Files/Pods-KaptenTest/Pods-KaptenTest.debug.xcconfig"; sourceTree = "<group>"; };
 		945EF796234F7CE000B9E7F1 /* TripsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListCell.swift; sourceTree = "<group>"; };
 		945EF799234F82FE00B9E7F1 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		945EF79C234F9FF100B9E7F1 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		94DC3FFA234E18ED00F7A803 /* KaptenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaptenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		945EF79B234F9FD300B9E7F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				945EF79C234F9FF100B9E7F1 /* RatingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		94DC3FF1234E18ED00F7A803 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +157,7 @@
 				94DC4023234E1FD600F7A803 /* Resources */,
 				94DC4021234E1FC100F7A803 /* Trip Details */,
 				94DC4020234E1FBB00F7A803 /* Trips List */,
+				945EF79B234F9FD300B9E7F1 /* Views */,
 			);
 			path = KaptenTest;
 			sourceTree = "<group>";
@@ -456,6 +467,7 @@
 				94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */,
 				94DC4041234E68F600F7A803 /* TripsListViewModel.swift in Sources */,
 				94DC403B234E60F900F7A803 /* NSAttributedStringExtensions.swift in Sources */,
+				945EF79D234F9FF100B9E7F1 /* RatingView.swift in Sources */,
 				94DC4025234E212E00F7A803 /* StarwarsAPI.swift in Sources */,
 				94DC4030234E370A00F7A803 /* NetworkingService.swift in Sources */,
 				94DC3FFE234E18ED00F7A803 /* AppDelegate.swift in Sources */,

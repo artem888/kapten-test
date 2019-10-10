@@ -34,11 +34,14 @@ class TripsListCell: UITableViewCell {
     }
     
     private func createInfoStackView(with cellData: TripCellData) -> UIStackView {
-        let subviews: [UIView] = [
+        var subviews: [UIView] = [
             createTitleLabel(with: cellData.title),
             createFromToLabelsView(with: cellData.from,
                                    to: cellData.to)
         ]
+        if cellData.hasRating {
+            subviews.append(createRatingView(with: cellData.rating))
+        }
         let sv = UIStackView(arrangedSubviews: subviews)
         sv.axis = .vertical
         sv.distribution = .equalSpacing
@@ -48,8 +51,6 @@ class TripsListCell: UITableViewCell {
         NSLayoutConstraint.activate([
             sv.leadingAnchor.constraint(equalTo: self.avatarImageView.trailingAnchor,
                                         constant: UIConstants.defaultPadding),
-            sv.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,
-                                         constant: -UIConstants.defaultPadding),
             sv.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor)
         ])
         
@@ -115,5 +116,12 @@ class TripsListCell: UITableViewCell {
         ])
         
         return v
+    }
+    
+    private func createRatingView(with rating: Int) -> RatingView {
+        return RatingView(rating: rating,
+                          normalImage: UIImage(named: "SmallStarEmpty")!,
+                          selectedImage: UIImage(named: "SmallStarFilled")!,
+                          imageSize: 24)
     }
 }

@@ -121,6 +121,17 @@ class TripCellDataTests: XCTestCase {
         XCTAssertFalse(trip.hasRating)
     }
     
+    func testRatingIntConversion() {
+        var trip: TripCellData = createTrip(with: 5.0)
+        XCTAssertEqual(trip.rating, 5)
+        
+        trip = createTrip(with: 4.5)
+        XCTAssertEqual(trip.rating, 5)
+        
+        trip = createTrip(with: 4.4)
+        XCTAssertEqual(trip.rating, 4)
+    }
+    
     // MARK: Private
     private func createTrip(with rating: Double) -> Trip {
         return Trip(id: 123,
