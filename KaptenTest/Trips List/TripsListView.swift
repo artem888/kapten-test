@@ -22,7 +22,7 @@ final class TripsListView: UIView {
     weak var delegate: TripsListViewDelegate?
     
     func render() {
-        self.backgroundColor = .white
+        self.backgroundColor = .black
         createBackgroundImageView()
         tableView = createTableView()
         activityIndicator = createActivityIndicator()

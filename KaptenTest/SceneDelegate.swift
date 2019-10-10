@@ -20,8 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let controller = TripsListViewController(navigator: navigator)
         rootController.setViewControllers([controller],
                                           animated: false)
-        rootController.navigationBar.barTintColor = .clear
-        rootController.navigationBar.isTranslucent = false
+        rootController.styleNavigationBar()
         self.window?.rootViewController = rootController
         self.window?.makeKeyAndVisible()
     }

@@ -9,8 +9,15 @@
 import UIKit
 
 final class TripDetailsViewController: UIViewController {
+    private var tripDetailsView: TripDetailsView!
+    
     init() {
         super.init(nibName: nil, bundle: nil)
+    }
+    
+    override func loadView() {
+        tripDetailsView = TripDetailsView()
+        self.view = tripDetailsView
     }
     
     required init?(coder: NSCoder) {
@@ -20,6 +27,7 @@ final class TripDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = .gray
+        self.navigationController?.navigationBar.topItem?.title = " "
+        tripDetailsView.render()
     }
 }

@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct TripDetailsViewModel {
+final class TripDetailsViewModel {
     
 }
