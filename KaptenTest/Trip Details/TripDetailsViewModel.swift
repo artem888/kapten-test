@@ -8,6 +8,14 @@
 
 import Foundation
 
-final class TripDetailsViewModel {
+protocol TripDetailsViewModelProtocol {
     
+}
+
+final class TripDetailsViewModel: TripDetailsViewModelProtocol {
+    private let trip: Trip
+    
+    init(trip: Trip) {
+        self.trip = trip
+    }
 }

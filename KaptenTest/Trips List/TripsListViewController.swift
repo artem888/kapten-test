@@ -85,7 +85,8 @@ extension TripsListViewController: TripsListViewDelegate {
     
     func tripsListView(_ view: TripsListView,
                        didSelectTripAt index: Int) {
-        navigator.navigate(to: .tripDetails(viewModel: TripDetailsViewModel()))
+        let vm = viewModel.detailsViewModel(at: index)
+        navigator.navigate(to: .tripDetails(viewModel: vm))
     }
     
     func tripsListView(_ view: TripsListView,

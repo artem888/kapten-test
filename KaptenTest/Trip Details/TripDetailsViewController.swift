@@ -10,8 +10,10 @@ import UIKit
 
 final class TripDetailsViewController: UIViewController {
     private var tripDetailsView: TripDetailsView!
+    private let viewModel: TripDetailsViewModelProtocol
     
-    init() {
+    init(viewModel: TripDetailsViewModelProtocol) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     

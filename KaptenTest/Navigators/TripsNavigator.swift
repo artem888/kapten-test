@@ -10,7 +10,7 @@ import UIKit
 
 class TripsNavigator: Navigator {
     enum Destination {
-        case tripDetails(viewModel: TripDetailsViewModel)
+        case tripDetails(viewModel: TripDetailsViewModelProtocol)
     }
     
     private weak var navigationController: UINavigationController?
@@ -29,7 +29,7 @@ class TripsNavigator: Navigator {
     private func makeViewController(for destination: Destination) -> UIViewController {
         switch destination {
         case .tripDetails(let viewModel):
-            return TripDetailsViewController()
+            return TripDetailsViewController(viewModel: viewModel)
         }
     }
 }

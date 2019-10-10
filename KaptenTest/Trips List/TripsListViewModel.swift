@@ -52,6 +52,7 @@ protocol TripsListViewModelProtocol {
     
     func refreshTrips()
     func hasRating(at index: Int) -> Bool
+    func detailsViewModel(at index: Int) -> TripDetailsViewModelProtocol
 }
 
 final class TripsListViewModel: TripsListViewModelProtocol {
@@ -93,6 +94,10 @@ final class TripsListViewModel: TripsListViewModelProtocol {
     
     func hasRating(at index: Int) -> Bool {
         return tripsRelay.value[index].hasRating
+    }
+    
+    func detailsViewModel(at index: Int) -> TripDetailsViewModelProtocol {
+        return TripDetailsViewModel(trip: tripsRelay.value[index])
     }
     
     // MARK: Private
