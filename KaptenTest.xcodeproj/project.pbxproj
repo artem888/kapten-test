@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		945EF797234F7CE000B9E7F1 /* TripsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF796234F7CE000B9E7F1 /* TripsListCell.swift */; };
+		945EF79A234F82FE00B9E7F1 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF799234F82FE00B9E7F1 /* Constans.swift */; };
 		94DC3FFE234E18ED00F7A803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */; };
 		94DC4000234E18ED00F7A803 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */; };
 		94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4001234E18ED00F7A803 /* TripsListViewController.swift */; };
@@ -46,6 +47,7 @@
 		6F46F2E16AC3853D00DD52D1 /* Pods_KaptenTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KaptenTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		771E7A9B265A05075F37B769 /* Pods-KaptenTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KaptenTest.debug.xcconfig"; path = "Target Support Files/Pods-KaptenTest/Pods-KaptenTest.debug.xcconfig"; sourceTree = "<group>"; };
 		945EF796234F7CE000B9E7F1 /* TripsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListCell.swift; sourceTree = "<group>"; };
+		945EF799234F82FE00B9E7F1 /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 		94DC3FFA234E18ED00F7A803 /* KaptenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaptenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		945EF798234F82E400B9E7F1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				945EF799234F82FE00B9E7F1 /* Constans.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		94DC3FF1234E18ED00F7A803 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +140,7 @@
 			children = (
 				94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */,
 				94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */,
+				945EF798234F82E400B9E7F1 /* Constants */,
 				94DC401F234E1F6900F7A803 /* Extensions */,
 				94DC4026234E21B300F7A803 /* Models */,
 				94DC4022234E1FCA00F7A803 /* Networking */,
@@ -440,6 +451,7 @@
 			files = (
 				94DC403F234E65E000F7A803 /* TripsListView.swift in Sources */,
 				94DC4028234E21C400F7A803 /* Trip.swift in Sources */,
+				945EF79A234F82FE00B9E7F1 /* Constans.swift in Sources */,
 				945EF797234F7CE000B9E7F1 /* TripsListCell.swift in Sources */,
 				94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */,
 				94DC4041234E68F600F7A803 /* TripsListViewModel.swift in Sources */,

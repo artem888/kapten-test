@@ -9,6 +9,8 @@
 import UIKit
 
 class TripsListCell: UITableViewCell {
+    private var avatarImageView: UIImageView!
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style,
                    reuseIdentifier: reuseIdentifier)
@@ -22,10 +24,20 @@ class TripsListCell: UITableViewCell {
     // MARK: Private
     private func render() {
         self.backgroundColor = .clear
+        self.avatarImageView = createAvatarImageView()
     }
     
     private func createAvatarImageView() -> UIImageView {
         let iv = UIImageView()
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(iv)
+        NSLayoutConstraint.activate([
+            iv.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor,
+                                        constant: UIConstants.defaultPadding),
+            iv.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor),
+            iv.widthAnchor.constraint(equalToConstant: 56),
+            iv.heightAnchor.constraint(equalToConstant: 56)
+        ])
         
         return iv
     }

@@ -46,12 +46,19 @@ final class TripsListViewController: UIViewController {
     }
     
     private func rxBind() {
+        viewModel.tripsData
+            .drive(tripsListView.tableView
+                .rx
+                .items(cellIdentifier: UIConstants.tripsListCellIdentifier,
+                       cellType: TripsListCell.self)) { index, model, cell in
+                        cell.textLabel?.text = "test"
+        }.disposed(by: disposeBag)
+        
         viewModel.viewState
             .asObservable()
             .subscribe(onNext: { state in
                 self.tripsListView.setViewState(state)
-            })
-            .disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
 }
 

@@ -6,4 +6,9 @@
 //  Copyright © 2019 Artem Sidorenko. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+enum UIConstants {
+    static let defaultPadding: CGFloat = 16.0
+    static let tripsListCellIdentifier: String = "TripsListCellIdentifier"
+}
