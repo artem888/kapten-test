@@ -10,6 +10,7 @@ import UIKit
 
 class TripsListCell: UITableViewCell {
     private(set) var avatarImageView: UIImageView!
+    private var infoStackView: UIStackView?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style,
@@ -21,10 +22,33 @@ class TripsListCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setData(_ cellData: TripCellData) {
+        infoStackView?.removeFromSuperview()
+        infoStackView = createInfoStackView(with: cellData)
+    }
+    
     // MARK: Private
     private func render() {
         self.backgroundColor = .clear
         self.avatarImageView = createAvatarImageView()
+    }
+    
+    private func createInfoStackView(with cellData: TripCellData) -> UIStackView {
+        let subviews: [UIView] = [
+            createTitleLabel(with: cellData.title)
+        ]
+        let sv = UIStackView(arrangedSubviews: subviews)
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(sv)
+        NSLayoutConstraint.activate([
+            sv.leadingAnchor.constraint(equalTo: self.avatarImageView.trailingAnchor,
+                                        constant: UIConstants.defaultPadding),
+            sv.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor,
+                                         constant: -UIConstants.defaultPadding),
+            sv.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor)
+        ])
+        
+        return sv
     }
     
     private func createAvatarImageView() -> UIImageView {
@@ -40,5 +64,12 @@ class TripsListCell: UITableViewCell {
         ])
         
         return iv
+    }
+    
+    private func createTitleLabel(with title: String) -> UILabel {
+        let l = UILabel()
+        l.attributedText = .cellTitle(with: title)
+        l.textAlignment = .left
+        return l
     }
 }

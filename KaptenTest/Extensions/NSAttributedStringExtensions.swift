@@ -10,12 +10,27 @@ import UIKit
 
 extension NSAttributedString {
     class func navigationAttributedTitle(with text: String) -> NSAttributedString {
+        return attributedString(with: text,
+                                font: UIFont.systemFont(ofSize: 17.0,
+                                                        weight: .semibold),
+                                foregroundColor: UIColor.white)
+    }
+    
+    class func cellTitle(with text: String) -> NSAttributedString {
+        return attributedString(with: text,
+                                font: UIFont.systemFont(ofSize: 15.0,
+                                                        weight: .semibold),
+                                foregroundColor: UIColor.white)
+    }
+    
+    class func attributedString(with text: String,
+                                font: UIFont,
+                                foregroundColor: UIColor) -> NSAttributedString {
         let attributedString =
             NSMutableAttributedString(string: text,
                                       attributes: [
-                                        .font: UIFont.systemFont(ofSize: 17.0,
-                                                                 weight: .semibold),
-                                        .foregroundColor: UIColor.white,
+                                        .font: font,
+                                        .foregroundColor: foregroundColor,
                                         .kern: 3.0
             ])
         attributedString.addAttribute(.kern,

@@ -19,7 +19,7 @@ protocol TripCellData {
 
 extension Trip: TripCellData {
     var title: String {
-        pilotName
+        pilotName.uppercased()
     }
     
     var from: String {

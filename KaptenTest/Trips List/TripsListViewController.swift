@@ -26,8 +26,9 @@ final class TripsListViewController: UIViewController {
     }
     
     override func loadView() {
-        self.tripsListView = TripsListView()
-        self.view = self.tripsListView
+        tripsListView = TripsListView()
+        tripsListView.delegate = self
+        self.view = tripsListView
     }
     
     override func viewDidLoad() {
@@ -52,6 +53,7 @@ final class TripsListViewController: UIViewController {
                 .rx
                 .items(cellIdentifier: UIConstants.tripsListCellIdentifier,
                        cellType: TripsListCell.self)) { index, model, cell in
+                        cell.setData(model)
                         if let url = model.imageUrl {
                             Nuke.loadImage(
                                 with: url,
@@ -65,7 +67,8 @@ final class TripsListViewController: UIViewController {
         
         viewModel.viewState
             .asObservable()
-            .subscribe(onNext: { state in
+            .subscribe(onNext: { [weak self] state in 
+                guard let self = self else { return }
                 self.tripsListView.setViewState(state)
             }).disposed(by: disposeBag)
     }

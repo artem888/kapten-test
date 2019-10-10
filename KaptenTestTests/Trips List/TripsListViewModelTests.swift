@@ -77,7 +77,7 @@ class TripsListViewModelTests: XCTestCase {
         XCTAssertEqual(events.count, 2)
         XCTAssertEqual(events[0].count, 0)
         XCTAssertEqual(events[1].count, 1)
-        XCTAssertEqual(events[1][0].title, "Darth")
+        XCTAssertEqual(events[1][0].title, "DARTH")
     }
     
     func testTripsData_withErrorResponse() {
@@ -105,7 +105,7 @@ class TripsListViewModelTests: XCTestCase {
 class TripCellDataTests: XCTestCase {
     func testCellDataIsCorrect() {
         let trip: TripCellData = createTrip()
-        XCTAssertEqual(trip.title, "Darth")
+        XCTAssertEqual(trip.title, "DARTH")
         XCTAssertEqual(trip.from, "Hoth")
         XCTAssertEqual(trip.to, "Tatooine")
         XCTAssertEqual(trip.imageUrl!, URL(string: "https://starwars.kapten.com/some_avatar.png"))
