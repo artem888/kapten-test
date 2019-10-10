@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 final class TripsListViewController: UIViewController {
     private var tripsListView: TripsListView!
     private let viewModel: TripsListViewModelProtocol
+    private let disposeBag = DisposeBag()
     
     init(viewModel: TripsListViewModelProtocol = TripsListViewModel()) {
         self.viewModel = viewModel
@@ -32,6 +35,7 @@ final class TripsListViewController: UIViewController {
         styleNavBar()
         tripsListView.render()
         viewModel.refreshTrips()
+        rxBind()
     }
     
     // MARK: Private
@@ -40,5 +44,23 @@ final class TripsListViewController: UIViewController {
         navigationTitleLabel.attributedText = .navigationAttributedTitle(with: "LAST TRIPS")
         self.navigationItem.titleView = navigationTitleLabel
     }
+    
+    private func rxBind() {
+        viewModel.viewState
+            .asObservable()
+            .subscribe(onNext: { state in
+                self.tripsListView.setViewState(state)
+            })
+            .disposed(by: disposeBag)
+    }
 }
 
+extension TripsListViewController: TripsListViewDelegate {
+    func tripsListViewRetryButtonDidTap(_ view: TripsListView) {
+        viewModel.refreshTrips()
+    }
+    
+    func tripsListView(_ view: TripsListView, didSelectTripAt index: Int) {
+        
+    }
+}

@@ -87,7 +87,6 @@ final class TripsListViewModel: TripsListViewModelProtocol {
             .asDriver(onErrorJustReturn: [])
         
         viewState = Observable.combineLatest(loadingRelay, tripsRelay)
-            .skip(1)
             .map { (loading, trips) -> ViewState in
                 if loading {
                     return .loading

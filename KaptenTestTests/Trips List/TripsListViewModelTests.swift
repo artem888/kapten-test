@@ -39,6 +39,7 @@ class TripsListViewModelTests: XCTestCase {
     func testViewState_withSuccessResponse() {
         let observer = scheduler.createObserver(TripsListViewModel.ViewState.self)
         sut.viewState
+            .skip(1)
             .drive(observer)
             .disposed(by: disposeBag)
         scheduler.start()
@@ -54,6 +55,7 @@ class TripsListViewModelTests: XCTestCase {
         
         let observer = scheduler.createObserver(TripsListViewModel.ViewState.self)
         sut.viewState
+            .skip(1)
             .drive(observer)
             .disposed(by: disposeBag)
         scheduler.start()

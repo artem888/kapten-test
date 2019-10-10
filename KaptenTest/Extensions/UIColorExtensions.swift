@@ -9,5 +9,5 @@
 import UIKit
 
 extension UIColor {
-    
+    static var separaratorColor = UIColor.white.withAlphaComponent(0.25)
 }
