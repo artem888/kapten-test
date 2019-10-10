@@ -9,7 +9,7 @@
 import UIKit
 
 class TripsListCell: UITableViewCell {
-    private var avatarImageView: UIImageView!
+    private(set) var avatarImageView: UIImageView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style,

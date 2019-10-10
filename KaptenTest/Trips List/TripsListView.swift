@@ -120,4 +120,8 @@ extension TripsListView: UITableViewDelegate {
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 88
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

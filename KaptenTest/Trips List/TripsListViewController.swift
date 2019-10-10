@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import Nuke
 
 final class TripsListViewController: UIViewController {
     private var tripsListView: TripsListView!
@@ -51,7 +52,15 @@ final class TripsListViewController: UIViewController {
                 .rx
                 .items(cellIdentifier: UIConstants.tripsListCellIdentifier,
                        cellType: TripsListCell.self)) { index, model, cell in
-                        cell.textLabel?.text = "test"
+                        if let url = model.imageUrl {
+                            Nuke.loadImage(
+                                with: url,
+                                options: ImageLoadingOptions(
+                                    transition: .fadeIn(duration: 0.33)
+                                ),
+                                into: cell.avatarImageView
+                            )
+                        }
         }.disposed(by: disposeBag)
         
         viewModel.viewState

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.0)
+  - Nuke (8.3.0)
   - RxAlamofire (5.0.0):
     - RxAlamofire/Core (= 5.0.0)
   - RxAlamofire/Core (5.0.0):
@@ -15,6 +16,7 @@ PODS:
     - RxSwift (~> 5)
 
 DEPENDENCIES:
+  - Nuke (~> 8.0)
   - RxAlamofire
   - RxCocoa (~> 5)
   - RxSwift (~> 5)
@@ -23,6 +25,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Nuke
     - RxAlamofire
     - RxCocoa
     - RxRelay
@@ -31,12 +34,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Nuke: 775e35cf3c12cde80b3bff5fc7a77abb0cf29d0b
   RxAlamofire: e7875a012aff55345672d0f70a2a9cd6aeb0f211
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
 
-PODFILE CHECKSUM: bdcc440abccdbdac128aa76bdcd2910d9c54612e
+PODFILE CHECKSUM: 63f391b244cd0d78dd8af8aa00eda0ee232ce198
 
 COCOAPODS: 1.8.3

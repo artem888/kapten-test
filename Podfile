@@ -9,6 +9,7 @@ target 'KaptenTest' do
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
   pod 'RxAlamofire'
+  pod 'Nuke', '~> 8.0'
 
   target 'KaptenTestTests' do
     inherit! :search_paths
