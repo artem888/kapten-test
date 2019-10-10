@@ -35,9 +35,14 @@ class TripsListCell: UITableViewCell {
     
     private func createInfoStackView(with cellData: TripCellData) -> UIStackView {
         let subviews: [UIView] = [
-            createTitleLabel(with: cellData.title)
+            createTitleLabel(with: cellData.title),
+            createFromToLabelsView(with: cellData.from,
+                                   to: cellData.to)
         ]
         let sv = UIStackView(arrangedSubviews: subviews)
+        sv.axis = .vertical
+        sv.distribution = .equalSpacing
+        sv.spacing = 8.0
         sv.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(sv)
         NSLayoutConstraint.activate([
@@ -71,5 +76,44 @@ class TripsListCell: UITableViewCell {
         l.attributedText = .cellTitle(with: title)
         l.textAlignment = .left
         return l
+    }
+    
+    private func createFromToLabelsView(with from: String,
+                                        to: String) -> UIView {
+        let v = UIView()
+        
+        let fromLabel = UILabel()
+        fromLabel.textAlignment = .left
+        fromLabel.attributedText = .cellSubtitle(with: from)
+        fromLabel.translatesAutoresizingMaskIntoConstraints = false
+        v.addSubview(fromLabel)
+        NSLayoutConstraint.activate([
+            fromLabel.leadingAnchor.constraint(equalTo: v.leadingAnchor),
+            fromLabel.topAnchor.constraint(equalTo: v.topAnchor),
+            fromLabel.bottomAnchor.constraint(equalTo: v.bottomAnchor)
+        ])
+        
+        let arrowImageView = UIImageView(image: UIImage(named: "Arrow"))
+        arrowImageView.translatesAutoresizingMaskIntoConstraints = false
+        v.addSubview(arrowImageView)
+        NSLayoutConstraint.activate([
+            arrowImageView.centerYAnchor.constraint(equalTo: v.centerYAnchor),
+            arrowImageView.leadingAnchor.constraint(equalTo: fromLabel.trailingAnchor,
+                                                    constant: UIConstants.defaultPadding)
+        ])
+        
+        let toLabel = UILabel()
+        toLabel.textAlignment = .left
+        toLabel.attributedText = .cellSubtitle(with: to)
+        toLabel.translatesAutoresizingMaskIntoConstraints = false
+        v.addSubview(toLabel)
+        NSLayoutConstraint.activate([
+            toLabel.leadingAnchor.constraint(equalTo: arrowImageView.trailingAnchor,
+                                             constant: UIConstants.defaultPadding),
+            toLabel.topAnchor.constraint(equalTo: v.topAnchor),
+            toLabel.bottomAnchor.constraint(equalTo: v.bottomAnchor)
+        ])
+        
+        return v
     }
 }

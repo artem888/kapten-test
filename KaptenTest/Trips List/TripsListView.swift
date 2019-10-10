@@ -78,7 +78,7 @@ final class TripsListView: UIView {
             tv.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             tv.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tv.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-            tv.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
+            tv.topAnchor.constraint(equalTo: self.topAnchor)
         ])
         
         return tv
