@@ -12,12 +12,16 @@ import RxCocoa
 import Nuke
 
 final class TripsListViewController: UIViewController {
+    private let navigator: TripsNavigator
+    
     private var tripsListView: TripsListView!
     private let viewModel: TripsListViewModelProtocol
     private let disposeBag = DisposeBag()
     
-    init(viewModel: TripsListViewModelProtocol = TripsListViewModel()) {
+    init(viewModel: TripsListViewModelProtocol = TripsListViewModel(),
+         navigator: TripsNavigator) {
         self.viewModel = viewModel
+        self.navigator = navigator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -81,7 +85,7 @@ extension TripsListViewController: TripsListViewDelegate {
     
     func tripsListView(_ view: TripsListView,
                        didSelectTripAt index: Int) {
-        
+        navigator.navigate(to: .tripDetails(viewModel: TripDetailsViewModel()))
     }
     
     func tripsListView(_ view: TripsListView,

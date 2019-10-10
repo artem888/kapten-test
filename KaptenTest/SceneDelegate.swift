@@ -15,8 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let controller = TripsListViewController()
-        let rootController = UINavigationController(rootViewController: controller)
+        let rootController = UINavigationController()
+        let navigator = TripsNavigator(navigationController: rootController)
+        let controller = TripsListViewController(navigator: navigator)
+        rootController.setViewControllers([controller],
+                                          animated: false)
         rootController.navigationBar.barTintColor = .clear
         rootController.navigationBar.isTranslucent = false
         self.window?.rootViewController = rootController
