@@ -33,6 +33,14 @@ extension NSAttributedString {
                                 applyKern: false)
     }
     
+    class func time(with text: String) -> NSAttributedString {
+        return attributedString(with: text,
+                                font: UIFont.systemFont(ofSize: 15.0,
+                                                        weight: .semibold),
+                                foregroundColor: .cellSubtitleColor,
+                                applyKern: true)
+    }
+    
     class func detailsTitle(with text: String) -> NSAttributedString {
         return attributedString(with: text,
                                 font: UIFont.systemFont(ofSize: 32.0,

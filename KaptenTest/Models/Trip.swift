@@ -14,7 +14,9 @@ struct Trip {
     let pilotAvatar: String
     let pilotRating: Double
     let pickupName: String
+    let pickupDate: String
     let dropoffName: String
+    let dropoffDate: String
 }
 
 extension Trip: Decodable {
@@ -26,10 +28,12 @@ extension Trip: Decodable {
     
     private struct Pickup: Decodable {
         let name: String
+        let date: String
     }
     
     private struct Dropoff: Decodable {
         let name: String
+        let date: String
     }
     
     private enum CodingKeys: String, CodingKey {
@@ -48,8 +52,10 @@ extension Trip: Decodable {
         
         let pickup = try container.decode(Pickup.self, forKey: .pickup)
         pickupName = pickup.name
+        pickupDate = pickup.date
         
         let dropoff = try container.decode(Dropoff.self, forKey: .dropoff)
         dropoffName = dropoff.name
+        dropoffDate = dropoff.date
     }
 }

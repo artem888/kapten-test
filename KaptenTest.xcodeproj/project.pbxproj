@@ -16,6 +16,7 @@
 		945EF7A7234FB2CD00B9E7F1 /* TripDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF7A6234FB2CD00B9E7F1 /* TripDetailsViewModel.swift */; };
 		945EF7A9234FC1DA00B9E7F1 /* UINavigationControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF7A8234FC1DA00B9E7F1 /* UINavigationControllerExtensions.swift */; };
 		945EF7AB234FC24700B9E7F1 /* TripDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF7AA234FC24700B9E7F1 /* TripDetailsView.swift */; };
+		945EF7AD23507DE400B9E7F1 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945EF7AC23507DE400B9E7F1 /* DateExtensions.swift */; };
 		94DC3FFE234E18ED00F7A803 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */; };
 		94DC4000234E18ED00F7A803 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */; };
 		94DC4002234E18ED00F7A803 /* TripsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DC4001234E18ED00F7A803 /* TripsListViewController.swift */; };
@@ -62,6 +63,7 @@
 		945EF7A6234FB2CD00B9E7F1 /* TripDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsViewModel.swift; sourceTree = "<group>"; };
 		945EF7A8234FC1DA00B9E7F1 /* UINavigationControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensions.swift; sourceTree = "<group>"; };
 		945EF7AA234FC24700B9E7F1 /* TripDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailsView.swift; sourceTree = "<group>"; };
+		945EF7AC23507DE400B9E7F1 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		94DC3FFA234E18ED00F7A803 /* KaptenTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KaptenTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94DC3FFD234E18ED00F7A803 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94DC3FFF234E18ED00F7A803 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				94DC403A234E60F900F7A803 /* NSAttributedStringExtensions.swift */,
 				94DC403C234E643800F7A803 /* UIColorExtensions.swift */,
 				945EF7A8234FC1DA00B9E7F1 /* UINavigationControllerExtensions.swift */,
+				945EF7AC23507DE400B9E7F1 /* DateExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				945EF7AB234FC24700B9E7F1 /* TripDetailsView.swift in Sources */,
+				945EF7AD23507DE400B9E7F1 /* DateExtensions.swift in Sources */,
 				945EF7A7234FB2CD00B9E7F1 /* TripDetailsViewModel.swift in Sources */,
 				94DC403F234E65E000F7A803 /* TripsListView.swift in Sources */,
 				94DC4028234E21C400F7A803 /* Trip.swift in Sources */,

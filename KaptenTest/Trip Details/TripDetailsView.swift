@@ -11,6 +11,8 @@ import UIKit
 final class TripDetailsView: UIView {
     private let viewData: TripDetailsViewModelProtocol
     private(set) var avatarImageView: UIImageView!
+    private var separatorView: UIView!
+    private var departureInfoStack: UIStackView!
     
     init(viewData: TripDetailsViewModelProtocol) {
         self.viewData = viewData
@@ -26,7 +28,9 @@ final class TripDetailsView: UIView {
         createBackgroundImageView()
         avatarImageView = createAvatarImageView()
         createPilotNameLabel()
-        createSeparatorView()
+        separatorView = createSeparatorView()
+        departureInfoStack = createDepartureInfoStack()
+        createArrivalInfoStack()
     }
     
     // MARK: Private
@@ -48,7 +52,7 @@ final class TripDetailsView: UIView {
         addSubview(iv)
         NSLayoutConstraint.activate([
             iv.leadingAnchor.constraint(equalTo: self.leadingAnchor,
-                                        constant: 24),
+                                        constant: ViewConstants.bigPadding),
             iv.topAnchor.constraint(equalTo: self.topAnchor, constant: ViewConstants.defaultPadding),
             iv.widthAnchor.constraint(equalToConstant: 72),
             iv.heightAnchor.constraint(equalToConstant: 72)
@@ -68,14 +72,14 @@ final class TripDetailsView: UIView {
         addSubview(l)
         NSLayoutConstraint.activate([
             l.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor,
-                                       constant: 24),
+                                       constant: ViewConstants.bigPadding),
             l.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
             l.trailingAnchor.constraint(equalTo: self.trailingAnchor,
                                         constant: -ViewConstants.defaultPadding)
         ])
     }
     
-    private func createSeparatorView() {
+    private func createSeparatorView() -> UIView {
         let v = UIView()
         v.backgroundColor = .separaratorColor
         v.translatesAutoresizingMaskIntoConstraints = false
@@ -85,7 +89,76 @@ final class TripDetailsView: UIView {
             v.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             v.heightAnchor.constraint(equalToConstant: 1),
             v.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor,
-                                   constant: 24)
+                                   constant: ViewConstants.bigPadding)
         ])
+        
+        return v
+    }
+    
+    private func createDepartureInfoStack() -> UIStackView {
+        let subviews = [
+            createStackTitleLabel(with: "Departure"),
+            createStackSubtitleLabel(with: viewData.from),
+            createTimeLabel(with: viewData.fromDate)
+        ]
+        
+        let sv = UIStackView(arrangedSubviews: subviews)
+        sv.axis = .vertical
+        sv.distribution = .equalSpacing
+        sv.spacing = 8
+        
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(sv)
+        NSLayoutConstraint.activate([
+            sv.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                        constant: ViewConstants.bigPadding),
+            sv.topAnchor.constraint(equalTo: separatorView.bottomAnchor,
+                                    constant: ViewConstants.bigPadding)
+        ])
+        
+        return sv
+    }
+    
+    private func createArrivalInfoStack() {
+        let subviews = [
+            createStackTitleLabel(with: "Arrival"),
+            createStackSubtitleLabel(with: viewData.to),
+            createTimeLabel(with: viewData.toDate)
+        ]
+        
+        let sv = UIStackView(arrangedSubviews: subviews)
+        sv.axis = .vertical
+        sv.distribution = .equalSpacing
+        sv.spacing = 8
+        
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(sv)
+        NSLayoutConstraint.activate([
+            sv.leadingAnchor.constraint(equalTo: self.departureInfoStack.trailingAnchor,
+                                        constant: 39),
+            sv.topAnchor.constraint(equalTo: separatorView.bottomAnchor,
+                                    constant: ViewConstants.bigPadding)
+        ])
+    }
+    
+    private func createStackTitleLabel(with title: String) -> UILabel {
+        let l = UILabel()
+        l.textAlignment = .left
+        l.attributedText = .cellSubtitle(with: title)
+        return l
+    }
+    
+    private func createStackSubtitleLabel(with title: String) -> UILabel {
+        let l = UILabel()
+        l.textAlignment = .left
+        l.attributedText = .cellTitle(with: title)
+        return l
+    }
+    
+    private func createTimeLabel(with title: String) -> UILabel {
+        let l = UILabel()
+        l.textAlignment = .left
+        l.attributedText = .time(with: title)
+        return l
     }
 }

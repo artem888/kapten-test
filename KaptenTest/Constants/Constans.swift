@@ -10,5 +10,6 @@ import UIKit
 
 enum ViewConstants {
     static let defaultPadding: CGFloat = 16.0
+    static let bigPadding: CGFloat = 24.0
     static let tripsListCellIdentifier: String = "TripsListCellIdentifier"
 }
