@@ -15,9 +15,18 @@ protocol TripDetailsViewModelProtocol {
     var to: String { get }
     var fromDate: String { get }
     var toDate: String { get }
+    var distance: String { get }
 }
 
 final class TripDetailsViewModel: TripDetailsViewModelProtocol {
+    var distance: String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        guard let formattedDistance =
+            numberFormatter.string(from: NSNumber(value: trip.distanceValue)) else { return "No distance" }
+        return "\(formattedDistance) \(trip.distanceUnit.uppercased())"
+    }
+    
     var fromDate: String {
         let dateFormatter = ISO8601DateFormatter()
         guard let date = dateFormatter.date(from: trip.pickupDate) else {

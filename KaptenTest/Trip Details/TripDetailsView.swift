@@ -31,6 +31,7 @@ final class TripDetailsView: UIView {
         separatorView = createSeparatorView()
         departureInfoStack = createDepartureInfoStack()
         createArrivalInfoStack()
+        createDistanceInfoStack()
     }
     
     // MARK: Private
@@ -137,6 +138,27 @@ final class TripDetailsView: UIView {
             sv.leadingAnchor.constraint(equalTo: self.departureInfoStack.trailingAnchor,
                                         constant: 39),
             sv.topAnchor.constraint(equalTo: separatorView.bottomAnchor,
+                                    constant: ViewConstants.bigPadding)
+        ])
+    }
+    
+    private func createDistanceInfoStack() {
+        let subviews = [
+            createStackTitleLabel(with: "Distance"),
+            createStackSubtitleLabel(with: viewData.distance)
+        ]
+        
+        let sv = UIStackView(arrangedSubviews: subviews)
+        sv.axis = .vertical
+        sv.distribution = .equalSpacing
+        sv.spacing = 8
+        
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(sv)
+        NSLayoutConstraint.activate([
+            sv.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                        constant: ViewConstants.bigPadding),
+            sv.topAnchor.constraint(equalTo: departureInfoStack.bottomAnchor,
                                     constant: ViewConstants.bigPadding)
         ])
     }

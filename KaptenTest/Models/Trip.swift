@@ -17,6 +17,8 @@ struct Trip {
     let pickupDate: String
     let dropoffName: String
     let dropoffDate: String
+    let distanceValue: Int
+    let distanceUnit: String
 }
 
 extension Trip: Decodable {
@@ -36,8 +38,13 @@ extension Trip: Decodable {
         let date: String
     }
     
+    private struct Distance: Decodable {
+        let value: Int
+        let unit: String
+    }
+    
     private enum CodingKeys: String, CodingKey {
-      case id, pilot, pickup = "pick_up", dropoff = "drop_off"
+      case id, pilot, distance, pickup = "pick_up", dropoff = "drop_off"
     }
     
     init(from decoder: Decoder) throws {
@@ -57,5 +64,9 @@ extension Trip: Decodable {
         let dropoff = try container.decode(Dropoff.self, forKey: .dropoff)
         dropoffName = dropoff.name
         dropoffDate = dropoff.date
+        
+        let distance = try container.decode(Distance.self, forKey: .distance)
+        distanceValue = distance.value
+        distanceUnit = distance.unit
     }
 }
