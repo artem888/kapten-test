@@ -13,6 +13,8 @@ final class TripDetailsView: UIView {
     private(set) var avatarImageView: UIImageView!
     private var separatorView: UIView!
     private var departureInfoStack: UIStackView!
+    private var arrivalInfoStack: UIStackView!
+    private var distanceInfoStack: UIStackView!
     
     init(viewData: TripDetailsViewModelProtocol) {
         self.viewData = viewData
@@ -30,8 +32,9 @@ final class TripDetailsView: UIView {
         createPilotNameLabel()
         separatorView = createSeparatorView()
         departureInfoStack = createDepartureInfoStack()
-        createArrivalInfoStack()
-        createDistanceInfoStack()
+        arrivalInfoStack = createArrivalInfoStack()
+        distanceInfoStack = createDistanceInfoStack()
+        createDurationInfoStack()
     }
     
     // MARK: Private
@@ -120,7 +123,7 @@ final class TripDetailsView: UIView {
         return sv
     }
     
-    private func createArrivalInfoStack() {
+    private func createArrivalInfoStack() -> UIStackView {
         let subviews = [
             createStackTitleLabel(with: "Arrival"),
             createStackSubtitleLabel(with: viewData.to),
@@ -135,14 +138,14 @@ final class TripDetailsView: UIView {
         sv.translatesAutoresizingMaskIntoConstraints = false
         addSubview(sv)
         NSLayoutConstraint.activate([
-            sv.leadingAnchor.constraint(equalTo: self.departureInfoStack.trailingAnchor,
-                                        constant: 39),
             sv.topAnchor.constraint(equalTo: separatorView.bottomAnchor,
                                     constant: ViewConstants.bigPadding)
         ])
+        
+        return sv
     }
     
-    private func createDistanceInfoStack() {
+    private func createDistanceInfoStack() -> UIStackView {
         let subviews = [
             createStackTitleLabel(with: "Distance"),
             createStackSubtitleLabel(with: viewData.distance)
@@ -160,6 +163,29 @@ final class TripDetailsView: UIView {
                                         constant: ViewConstants.bigPadding),
             sv.topAnchor.constraint(equalTo: departureInfoStack.bottomAnchor,
                                     constant: ViewConstants.bigPadding)
+        ])
+        
+        return sv
+    }
+    
+    private func createDurationInfoStack() {
+        let subviews = [
+            createStackTitleLabel(with: "Trip Duration"),
+            createStackSubtitleLabel(with: viewData.duration)
+        ]
+        
+        let sv = UIStackView(arrangedSubviews: subviews)
+        sv.axis = .vertical
+        sv.distribution = .equalSpacing
+        sv.spacing = 8
+        
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(sv)
+        NSLayoutConstraint.activate([
+            sv.leadingAnchor.constraint(equalTo: self.arrivalInfoStack.leadingAnchor),
+            sv.leadingAnchor.constraint(equalTo: self.distanceInfoStack.trailingAnchor,
+                                        constant: 39),
+            sv.topAnchor.constraint(equalTo: distanceInfoStack.topAnchor)
         ])
     }
     

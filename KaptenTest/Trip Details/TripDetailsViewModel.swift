@@ -16,9 +16,14 @@ protocol TripDetailsViewModelProtocol {
     var fromDate: String { get }
     var toDate: String { get }
     var distance: String { get }
+    var duration: String { get }
 }
 
 final class TripDetailsViewModel: TripDetailsViewModelProtocol {
+    var duration: String {
+        return TimeInterval(trip.duration).timeStringFromMilliseconds()
+    }
+    
     var distance: String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
