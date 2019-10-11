@@ -18,6 +18,11 @@ class TripTests: XCTestCase {
         XCTAssertEqual(trip.pickupName, "Yavin 4")
         XCTAssertEqual(trip.dropoffName, "Naboo")
         XCTAssertEqual(trip.pilotRating, 5.0)
+        XCTAssertEqual(trip.distanceUnit, "km")
+        XCTAssertEqual(trip.distanceValue, 2478572)
+        XCTAssertEqual(trip.duration, 19427000)
+        XCTAssertEqual(trip.pickupDate, "2017-12-09T14:12:51Z")
+        XCTAssertEqual(trip.dropoffDate, "2017-12-09T19:35:51Z")
     }
     
     // MARK: Private

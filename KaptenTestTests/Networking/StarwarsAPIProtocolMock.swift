@@ -33,7 +33,12 @@ class StarwarsAPIProtocolMock: StarwarsAPIProtocol {
                  pilotAvatar: "/some_avatar.png",
                  pilotRating: 4.0,
                  pickupName: "Hoth",
-                 dropoffName: "Tatooine")
+                 pickupDate: "2017-12-09T14:12:51Z",
+                 dropoffName: "Tatooine",
+                 dropoffDate: "2017-12-09T14:12:51Z",
+                 distanceValue: 123,
+                 distanceUnit: "km",
+                 duration: 19427000)
         ]
     }
 }

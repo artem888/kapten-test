@@ -22,14 +22,14 @@ class TripsListViewModelTests: XCTestCase {
         scheduler = TestScheduler(initialClock: 0)
         disposeBag = DisposeBag()
     }
-
+    
     override func tearDown() {
         scheduler = nil
         disposeBag = nil
         apiMock = nil
         sut = nil
     }
-
+    
     func testRefreshTrips_tripsAPICalled() {
         XCTAssertFalse(apiMock.tripsWasCalled)
         sut.refreshTrips()
@@ -139,6 +139,11 @@ class TripCellDataTests: XCTestCase {
                     pilotAvatar: "/some_avatar.png",
                     pilotRating: rating,
                     pickupName: "Hoth",
-                    dropoffName: "Tatooine")
+                    pickupDate: "2017-12-09T14:12:51Z",
+                    dropoffName: "Tatooine",
+                    dropoffDate: "2017-12-09T14:12:51Z",
+                    distanceValue: 123,
+                    distanceUnit: "km",
+                    duration: 19427000)
     }
 }
