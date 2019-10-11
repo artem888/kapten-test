@@ -11,7 +11,6 @@ import UIKit
 final class TripDetailsView: UIView {
     private let viewData: TripDetailsViewModelProtocol
     private(set) var avatarImageView: UIImageView!
-    private var pilotNameLabel: UILabel!
     
     init(viewData: TripDetailsViewModelProtocol) {
         self.viewData = viewData
@@ -26,7 +25,8 @@ final class TripDetailsView: UIView {
         self.backgroundColor = .black
         createBackgroundImageView()
         avatarImageView = createAvatarImageView()
-        pilotNameLabel = createPilotoNameLabel()
+        createPilotNameLabel()
+        createSeparatorView()
     }
     
     // MARK: Private
@@ -57,7 +57,7 @@ final class TripDetailsView: UIView {
         return iv
     }
     
-    private func createPilotoNameLabel() -> UILabel {
+    private func createPilotNameLabel() {
         let l = UILabel()
         l.attributedText = .detailsTitle(with: viewData.pilotName)
         l.textAlignment = .left
@@ -73,7 +73,19 @@ final class TripDetailsView: UIView {
             l.trailingAnchor.constraint(equalTo: self.trailingAnchor,
                                         constant: -ViewConstants.defaultPadding)
         ])
-        
-        return l
+    }
+    
+    private func createSeparatorView() {
+        let v = UIView()
+        v.backgroundColor = .separaratorColor
+        v.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(v)
+        NSLayoutConstraint.activate([
+            v.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            v.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            v.heightAnchor.constraint(equalToConstant: 1),
+            v.topAnchor.constraint(equalTo: avatarImageView.bottomAnchor,
+                                   constant: 24)
+        ])
     }
 }
