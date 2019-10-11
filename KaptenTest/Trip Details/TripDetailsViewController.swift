@@ -19,7 +19,7 @@ final class TripDetailsViewController: UIViewController {
     }
     
     override func loadView() {
-        tripDetailsView = TripDetailsView()
+        tripDetailsView = TripDetailsView(viewData: viewModel)
         self.view = tripDetailsView
     }
     

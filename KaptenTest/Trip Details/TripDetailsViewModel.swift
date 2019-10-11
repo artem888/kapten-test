@@ -10,9 +10,15 @@ import Foundation
 
 protocol TripDetailsViewModelProtocol {
     var avatarImageUrl: URL? { get }
+    var pilotName: String { get }
 }
 
 final class TripDetailsViewModel: TripDetailsViewModelProtocol {
+    var pilotName: String {
+        trip.pilotName.uppercased().replacingOccurrences(of: " ",
+                                                         with: "\n")
+    }
+    
     var avatarImageUrl: URL? {
         trip.imageUrl
     }

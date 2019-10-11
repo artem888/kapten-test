@@ -13,7 +13,7 @@ extension NSAttributedString {
         return attributedString(with: text,
                                 font: UIFont.systemFont(ofSize: 17.0,
                                                         weight: .semibold),
-                                foregroundColor: UIColor.white,
+                                foregroundColor: .white,
                                 applyKern: true)
     }
     
@@ -21,7 +21,7 @@ extension NSAttributedString {
         return attributedString(with: text,
                                 font: UIFont.systemFont(ofSize: 15.0,
                                                         weight: .semibold),
-                                foregroundColor: UIColor.white,
+                                foregroundColor: .white,
                                 applyKern: true)
     }
     
@@ -33,16 +33,26 @@ extension NSAttributedString {
                                 applyKern: false)
     }
     
+    class func detailsTitle(with text: String) -> NSAttributedString {
+        return attributedString(with: text,
+                                font: UIFont.systemFont(ofSize: 32.0,
+                                                        weight: .heavy),
+                                foregroundColor: .white,
+                                applyKern: true,
+                                kernValue: 10.0)
+    }
+    
     class func attributedString(with text: String,
                                 font: UIFont,
                                 foregroundColor: UIColor,
-                                applyKern: Bool) -> NSAttributedString {
+                                applyKern: Bool,
+                                kernValue: CGFloat = 3.0) -> NSAttributedString {
         let attributedString =
             NSMutableAttributedString(string: text,
                                       attributes: [
                                         .font: font,
                                         .foregroundColor: foregroundColor,
-                                        .kern: applyKern ? 3.0 : 0.0
+                                        .kern: applyKern ? kernValue : 0.0
             ])
         
         if applyKern {

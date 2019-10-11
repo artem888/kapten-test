@@ -9,12 +9,24 @@
 import UIKit
 
 final class TripDetailsView: UIView {
+    private let viewData: TripDetailsViewModelProtocol
     private(set) var avatarImageView: UIImageView!
+    private var pilotNameLabel: UILabel!
+    
+    init(viewData: TripDetailsViewModelProtocol) {
+        self.viewData = viewData
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     func render() {
         self.backgroundColor = .black
         createBackgroundImageView()
         avatarImageView = createAvatarImageView()
+        pilotNameLabel = createPilotoNameLabel()
     }
     
     // MARK: Private
@@ -43,5 +55,25 @@ final class TripDetailsView: UIView {
         ])
         
         return iv
+    }
+    
+    private func createPilotoNameLabel() -> UILabel {
+        let l = UILabel()
+        l.attributedText = .detailsTitle(with: viewData.pilotName)
+        l.textAlignment = .left
+        l.numberOfLines = 0
+        l.adjustsFontSizeToFitWidth = true
+        l.minimumScaleFactor = 0.7
+        l.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(l)
+        NSLayoutConstraint.activate([
+            l.leadingAnchor.constraint(equalTo: avatarImageView.trailingAnchor,
+                                       constant: 24),
+            l.centerYAnchor.constraint(equalTo: avatarImageView.centerYAnchor),
+            l.trailingAnchor.constraint(equalTo: self.trailingAnchor,
+                                        constant: -ViewConstants.defaultPadding)
+        ])
+        
+        return l
     }
 }
