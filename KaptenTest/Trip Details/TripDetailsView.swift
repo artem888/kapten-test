@@ -35,6 +35,7 @@ final class TripDetailsView: UIView {
         arrivalInfoStack = createArrivalInfoStack()
         distanceInfoStack = createDistanceInfoStack()
         createDurationInfoStack()
+        createPilotRatingStack()
     }
     
     // MARK: Private
@@ -189,6 +190,29 @@ final class TripDetailsView: UIView {
         ])
     }
     
+    private func createPilotRatingStack() {
+        let subviews = [
+            createStackTitleLabel(with: "Pilot Rating"),
+            viewData.hasRating ?
+            createRatingView(with: viewData.pilotRating) :
+            createTimeLabel(with: "USER DIDN'T RATE YET")
+        ]
+        
+        let sv = UIStackView(arrangedSubviews: subviews)
+        sv.axis = .vertical
+        sv.distribution = .equalSpacing
+        sv.spacing = viewData.hasRating ? 8 : ViewConstants.bigPadding
+        
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(sv)
+        NSLayoutConstraint.activate([
+            sv.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                        constant: ViewConstants.bigPadding),
+            sv.topAnchor.constraint(equalTo: distanceInfoStack.bottomAnchor,
+                                    constant: ViewConstants.bigPadding)
+        ])
+    }
+    
     private func createStackTitleLabel(with title: String) -> UILabel {
         let l = UILabel()
         l.textAlignment = .left
@@ -208,5 +232,12 @@ final class TripDetailsView: UIView {
         l.textAlignment = .left
         l.attributedText = .time(with: title)
         return l
+    }
+    
+    private func createRatingView(with rating: Int) -> RatingView {
+        return RatingView(rating: rating,
+                          normalImage: UIImage(named: "StarBigEmpty")!,
+                          selectedImage: UIImage(named: "StarBigFilled")!,
+                          imageSize: 40)
     }
 }

@@ -17,11 +17,21 @@ protocol TripDetailsViewModelProtocol {
     var toDate: String { get }
     var distance: String { get }
     var duration: String { get }
+    var pilotRating: Int { get }
+    var hasRating: Bool { get }
 }
 
 final class TripDetailsViewModel: TripDetailsViewModelProtocol {
+    var hasRating: Bool {
+        trip.hasRating
+    }
+    
+    var pilotRating: Int {
+        trip.rating
+    }
+    
     var duration: String {
-        return TimeInterval(trip.duration).timeStringFromMilliseconds()
+        TimeInterval(trip.duration).timeStringFromMilliseconds()
     }
     
     var distance: String {
