@@ -50,7 +50,7 @@ class TripsListCell: UITableViewCell {
         contentView.addSubview(sv)
         NSLayoutConstraint.activate([
             sv.leadingAnchor.constraint(equalTo: self.avatarImageView.trailingAnchor,
-                                        constant: UIConstants.defaultPadding),
+                                        constant: ViewConstants.defaultPadding),
             sv.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor)
         ])
         
@@ -63,7 +63,7 @@ class TripsListCell: UITableViewCell {
         contentView.addSubview(iv)
         NSLayoutConstraint.activate([
             iv.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor,
-                                        constant: UIConstants.defaultPadding),
+                                        constant: ViewConstants.defaultPadding),
             iv.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor),
             iv.widthAnchor.constraint(equalToConstant: 56),
             iv.heightAnchor.constraint(equalToConstant: 56)
@@ -100,7 +100,7 @@ class TripsListCell: UITableViewCell {
         NSLayoutConstraint.activate([
             arrowImageView.centerYAnchor.constraint(equalTo: v.centerYAnchor),
             arrowImageView.leadingAnchor.constraint(equalTo: fromLabel.trailingAnchor,
-                                                    constant: UIConstants.defaultPadding)
+                                                    constant: ViewConstants.defaultPadding)
         ])
         
         let toLabel = UILabel()
@@ -110,7 +110,7 @@ class TripsListCell: UITableViewCell {
         v.addSubview(toLabel)
         NSLayoutConstraint.activate([
             toLabel.leadingAnchor.constraint(equalTo: arrowImageView.trailingAnchor,
-                                             constant: UIConstants.defaultPadding),
+                                             constant: ViewConstants.defaultPadding),
             toLabel.topAnchor.constraint(equalTo: v.topAnchor),
             toLabel.bottomAnchor.constraint(equalTo: v.bottomAnchor)
         ])

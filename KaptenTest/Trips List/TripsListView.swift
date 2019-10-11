@@ -67,7 +67,7 @@ final class TripsListView: UIView {
         let tv = UITableView(frame: .zero,
                              style: .grouped)
         tv.register(TripsListCell.self,
-                    forCellReuseIdentifier: UIConstants.tripsListCellIdentifier)
+                    forCellReuseIdentifier: ViewConstants.tripsListCellIdentifier)
         tv.backgroundColor = .clear
         tv.delegate = self
         tv.isHidden = true

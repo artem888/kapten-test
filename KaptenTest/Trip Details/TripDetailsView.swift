@@ -9,9 +9,12 @@
 import UIKit
 
 final class TripDetailsView: UIView {
+    private(set) var avatarImageView: UIImageView!
+    
     func render() {
         self.backgroundColor = .black
         createBackgroundImageView()
+        avatarImageView = createAvatarImageView()
     }
     
     // MARK: Private
@@ -25,5 +28,20 @@ final class TripDetailsView: UIView {
             iv.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             iv.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
         ])
+    }
+    
+    private func createAvatarImageView() -> UIImageView {
+        let iv = UIImageView()
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(iv)
+        NSLayoutConstraint.activate([
+            iv.leadingAnchor.constraint(equalTo: self.leadingAnchor,
+                                        constant: 24),
+            iv.topAnchor.constraint(equalTo: self.topAnchor, constant: ViewConstants.defaultPadding),
+            iv.widthAnchor.constraint(equalToConstant: 72),
+            iv.heightAnchor.constraint(equalToConstant: 72)
+        ])
+        
+        return iv
     }
 }

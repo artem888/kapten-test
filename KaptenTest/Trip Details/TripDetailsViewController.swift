@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 final class TripDetailsViewController: UIViewController {
     private var tripDetailsView: TripDetailsView!
@@ -31,5 +32,19 @@ final class TripDetailsViewController: UIViewController {
         
         self.navigationController?.navigationBar.topItem?.title = " "
         tripDetailsView.render()
+        updateAvatarImage()
+    }
+    
+    // MARK: Private
+    private func updateAvatarImage() {
+        if let url = viewModel.avatarImageUrl {
+            Nuke.loadImage(
+                with: url,
+                options: ImageLoadingOptions(
+                    transition: .fadeIn(duration: 0.33)
+                ),
+                into: tripDetailsView.avatarImageView
+            )
+        }
     }
 }

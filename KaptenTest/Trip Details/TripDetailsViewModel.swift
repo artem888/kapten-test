@@ -9,10 +9,14 @@
 import Foundation
 
 protocol TripDetailsViewModelProtocol {
-    
+    var avatarImageUrl: URL? { get }
 }
 
 final class TripDetailsViewModel: TripDetailsViewModelProtocol {
+    var avatarImageUrl: URL? {
+        trip.imageUrl
+    }
+    
     private let trip: Trip
     
     init(trip: Trip) {

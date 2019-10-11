@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum UIConstants {
+enum ViewConstants {
     static let defaultPadding: CGFloat = 16.0
     static let tripsListCellIdentifier: String = "TripsListCellIdentifier"
 }

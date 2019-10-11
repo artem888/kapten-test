@@ -55,7 +55,7 @@ final class TripsListViewController: UIViewController {
         viewModel.tripsData
             .drive(tripsListView.tableView
                 .rx
-                .items(cellIdentifier: UIConstants.tripsListCellIdentifier,
+                .items(cellIdentifier: ViewConstants.tripsListCellIdentifier,
                        cellType: TripsListCell.self)) { index, model, cell in
                         cell.setData(model)
                         if let url = model.imageUrl {
